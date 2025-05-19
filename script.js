@@ -97,14 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Form submission handling
-  const contactForm = document.getElementById("contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      // Form submission is handled by the inline script in contact.html
-    })
-  }
-
   // Initialize accordion items
   const accordionItems = document.querySelectorAll(".accordion-item")
   if (accordionItems.length > 0) {
@@ -117,20 +109,38 @@ document.addEventListener("DOMContentLoaded", () => {
       firstContent.style.maxHeight = firstContent.scrollHeight + "px"
     }
   }
-})
 
-// Add animation on scroll
-window.addEventListener("scroll", () => {
-  const elements = document.querySelectorAll(
-    ".feature-card, .service-card, .policy-card, .contact-card, .program-card, .sede-card",
-  )
+  // Animate elements on scroll
+  const animateOnScroll = () => {
+    const elements = document.querySelectorAll(".animate__animated:not(.animate__animated--triggered)")
 
-  elements.forEach((element) => {
-    const position = element.getBoundingClientRect()
+    elements.forEach((element) => {
+      const elementPosition = element.getBoundingClientRect().top
+      const windowHeight = window.innerHeight
 
-    // If element is in viewport
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-      element.classList.add("animated")
-    }
-  })
+      if (elementPosition < windowHeight - 100) {
+        element.classList.add("animate__animated--triggered")
+
+        // Get the animation class
+        const classes = element.className.split(" ")
+        const animationClass = classes.find(
+          (cls) => cls.startsWith("animate__") && cls !== "animate__animated" && cls !== "animate__animated--triggered",
+        )
+
+        if (animationClass) {
+          // Remove the class and add it again to restart the animation
+          element.classList.remove(animationClass)
+          setTimeout(() => {
+            element.classList.add(animationClass)
+          }, 50)
+        }
+      }
+    })
+  }
+
+  // Run on page load
+  animateOnScroll()
+
+  // Run on scroll
+  window.addEventListener("scroll", animateOnScroll)
 })

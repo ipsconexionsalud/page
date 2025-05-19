@@ -6,69 +6,96 @@
     <title>Fundación Conexión Salud Maesvi - Sobre Nosotros</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header>
         <div class="container">
-            <!--<div class="logo">
-                <a href="index.html">
-                    <img src="logo.jpg" alt="Logo Fundación Conexión Salud Maesvi">
-                </a>-->
-
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.jpg" alt="Logo Fundación Conexión Salud Maesvi">
+                    </a>
+                </div>
+                <nav>
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul class="menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html" class="active">Sobre Nosotros</a></li>
+                        <li><a href="services.html">Nuestros Servicios</a></li>
+                        <li><a href="programas.html">Nuestros Programas</a></li>
+                        <li><a href="sedes.html">Nuestras Sedes</a></li>
+                        <li><a href="documents.html">Documentos</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </label>
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="about.html" class="active">Sobre Nosotros</a></li>
-                    <li><a href="services.html">Nuestros Servicios</a></li>
-                    <li><a href="programas.html">Nuestros Programas</a></li>
-                    <li><a href="sedes.html">Nuestras Sedes</a></li>
-                    <li><a href="documents.html">Documentos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <section class="page-header">
+        <div class="page-header-overlay"></div>
         <div class="container">
-            <h2>Sobre Nosotros</h2>
-            <p>Conozca más acerca de Fundación Conexión Salud Maesvi</p>
+            <h2 class="animate__animated animate__fadeIn">Sobre Nosotros</h2>
+            <p class="animate__animated animate__fadeIn">Conozca más acerca de Fundación Conexión Salud Maesvi</p>
         </div>
     </section>
 
+    <div class="wave-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
     <section class="about-intro">
         <div class="container">
+            <div class="section-header">
+                <h2 class="animate__animated animate__fadeIn">Nuestra Historia</h2>
+                <div class="underline"></div>
+            </div>
             <div class="about-content">
-                <div class="about-text">
-                    <h2>Nuestra Historia</h2>
+                <div class="about-text animate__animated animate__fadeInLeft">
                     <p>La Fundación Conexión Salud Maesvi es una Institución Prestadora de Servicios de Salud (IPS) con presencia en los departamentos de Nariño, Cauca y Putumayo. Su sede principal se encuentra en la ciudad de Pasto, Nariño.</p>
 
                     <p>A lo largo de estos años, nos hemos consolidado como una institución de referencia en el sector salud, gracias a nuestro compromiso con la excelencia y el trato humano hacia nuestros pacientes.</p>
                     <p>La misión de la fundación es ofrecer atención médica integral y de calidad, enfocada en las necesidades de los usuarios y respaldada por un equipo profesional comprometido con el bienestar de la comunidad.</p>
                 </div>
-                <div class="about-image">
+                <div class="about-image animate__animated animate__fadeInRight">
                     <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Historia de Fundación Conexión Salud Maesvi">
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="wave-divider wave-divider-flip">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f8f9fa" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
     <section class="mission-vision">
         <div class="container">
-            <h2>Nuestra Misión y Visión</h2>
+            <div class="section-header">
+                <h2 class="animate__animated animate__fadeIn">Nuestra Misión y Visión</h2>
+                <div class="underline"></div>
+            </div>
             <div class="mission-vision-grid">
-                <div class="mission-card">
+                <div class="mission-card animate__animated animate__fadeInUp">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
                     <h3>MISIÓN</h3>
                     <p>"Somos una institución prestadora de servicios de salud, encaminada a brindar servicios con calidad, seguridad y humanización, mediante un talento humano calificado y comprometido en satisfacer las necesidades de nuestros clientes".</p>
                 </div>
-                <div class="vision-card">
+                <div class="vision-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
                     <h3>VISIÓN</h3>
                     <p>Ser en el 2028 una empresa reconocida a nivel departamental en la prestación de servicios de salud integrales en la modalidad ambulatoria y domiciliaria, con énfasis en la atención integral, segura y humanizada, garantizando la sostenibilidad financiera y el mejoramiento continuo de los procesos institucionales.</p>
                 </div>
@@ -78,20 +105,29 @@
 
     <section class="policies">
         <div class="container">
-            <h2>Políticas Institucionales</h2>
+            <div class="section-header">
+                <h2 class="animate__animated animate__fadeIn">Políticas Institucionales</h2>
+                <div class="underline"></div>
+            </div>
             <div class="policy-grid">
-                <div class="policy-card">
-                    <i class="fas fa-shield-alt"></i>
+                <div class="policy-card animate__animated animate__fadeInUp">
+                    <div class="policy-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
                     <h3>Política de Seguridad del Paciente</h3>
                     <p>Fundación Conexión Salud Maesvi se compromete a prestar una atención segura, fortaleciendo la cultura de seguridad del paciente, mediante la identificación y gestión de los riesgos asociados a la prestación de servicios de salud, implementación de prácticas seguras, así como la identificación, reporte y gestión de incidentes y eventos adversos, involucrando al paciente, su familia y los colaboradores de la institución.</p>
                 </div>
-                <div class="policy-card">
-                    <i class="fas fa-users"></i>
+                <div class="policy-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="policy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
                     <h3>Política de Participación Social en Salud</h3>
                     <p>Fundación Conexión Salud Maesvi, promueve el derecho de los usuarios, familiares y/o acudientes a participar activamente en los procesos relacionados con su salud. Nuestro compromiso es brindar los mecanismos, espacios y condiciones necesarios para que puedan ejercer plenamente sus derechos y deberes.</p>
                 </div>
-                <div class="policy-card">
-                    <i class="fas fa-heart"></i>
+                <div class="policy-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="policy-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
                     <h3>Política de Humanización de la Atención en Salud</h3>
                     <p>Fundación Conexión Salud Maesvi está comprometida con garantizar una atención integral durante la prestación de los servicios de salud, basada en el respeto, privacidad y dignidad de los usuarios, sus familias y colaboradores.</p>
                 </div>
@@ -99,11 +135,20 @@
         </div>
     </section>
 
+    <div class="wave-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
     <section class="rights-duties">
         <div class="container">
-            <h2>Derechos y Deberes de los Pacientes</h2>
+            <div class="section-header">
+                <h2 class="animate__animated animate__fadeIn">Derechos y Deberes de los Pacientes</h2>
+                <div class="underline"></div>
+            </div>
             <div class="rights-duties-grid">
-                <div class="rights-card">
+                <div class="rights-card animate__animated animate__fadeInLeft">
                     <h3>Derechos</h3>
                     <ul>
                         <li>Elegir al profesional por quien desea ser atendido.</li>
@@ -118,7 +163,7 @@
                         <li>Conocer los requisitos necesarios y el costo del servicio.</li>
                     </ul>
                 </div>
-                <div class="duties-card">
+                <div class="duties-card animate__animated animate__fadeInRight">
                     <h3>Deberes</h3>
                     <ul>
                         <li>Cuidar su salud, la de su familia y comunidad.</li>
@@ -136,14 +181,22 @@
     </section>
 
     <section class="cta">
+        <div class="cta-overlay"></div>
         <div class="container">
-            <h2>Forme parte de nuestra familia</h2>
-            <p>Conozca nuestros servicios y experimente la diferencia de Fundación Conexión Salud Maesvi.</p>
-            <a href="services.html" class="btn">Ver Servicios</a>
+            <div class="cta-content animate__animated animate__fadeIn">
+                <h2>Forme parte de nuestra familia</h2>
+                <p>Conozca nuestros servicios y experimente la diferencia de Fundación Conexión Salud Maesvi.</p>
+                <a href="services.html" class="btn btn-light pulse-animation">Ver Servicios</a>
+            </div>
         </div>
     </section>
 
     <footer>
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#0a2a7a" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,202.7C672,203,768,181,864,186.7C960,192,1056,224,1152,218.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">

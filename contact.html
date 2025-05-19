@@ -10,27 +10,29 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="logo.jpg" alt="Logo Fundación Conexión Salud Maesvi">
-                </a>
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.jpg" alt="Logo Fundación Conexión Salud Maesvi">
+                    </a>
+                </div>
+                <nav>
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul class="menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Nosotros</a></li>
+                        <li><a href="services.html">Nuestros Servicios</a></li>
+                        <li><a href="programas.html">Nuestros Programas</a></li>
+                        <li><a href="sedes.html">Nuestras Sedes</a></li>
+                        <li><a href="documents.html">Documentos</a></li>
+                        <li><a href="contact.html" class="active">Contacto</a></li>
+                        <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </label>
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="about.html">Sobre Nosotros</a></li>
-                    <li><a href="services.html">Nuestros Servicios</a></li>
-                    <li><a href="programas.html">Nuestros Programas</a></li>
-                    <li><a href="sedes.html">Nuestras Sedes</a></li>
-                    <li><a href="documents.html">Documentos</a></li>
-                    <li><a href="contact.html" class="active">Contacto</a></li>
-                    <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
@@ -44,44 +46,61 @@
     <section class="contact-info">
         <div class="container">
             <h2>Nuestras Sedes</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Sede 22 - San Ignacio</h3>
-                    <p>Calle 13 #30a-26</p>
-                    <p>Teléfonos: 3218080610 - 3017042805</p>
-                    <p>Email: <a href="mailto:conexionsaludipsb24x@gmail.com">B24X</a></p>
-                    <p>Programas: B24X</p>
+            <div class="contact-cards-horizontal">
+                <div class="contact-card-horizontal">
+                    <div class="contact-card-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Sede 22 - San Ignacio</h3>
+                    </div>
+                    <div class="contact-card-body">
+                        <p><strong>Dirección:</strong> Calle 13 #30a-26</p>
+                        <p><strong>Teléfonos:</strong> 3218080610 - 3017042805</p>
+                        <p><strong>Email:</strong> <a href="mailto:conexionsaludipsb24x@gmail.com">B24X</a></p>
+                        <p><strong>Programas:</strong> B24X</p>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Sede 34 - San Ignacio</h3>
-                    <p>Cra. 29 # 12A-13</p>
-                    <p>Teléfonos:</p>
-                    <p>Optometría: 316 1194930</p>
-                    <p>Home Care: 3008742340</p>
-                    <p>Cuidados Paliativos: 3016012706</p>
-                    <p>Emails:</p>
-                    <p><a href="mailto:opticaconexions@gmail.com">Optometría</a></p>
-                    <p><a href="mailto:conexionsaludhomecare@gmail.com">Home Care</a></p>
-                    <p><a href="mailto:conexionsaludipsb24x@gmail.com">B24X</a></p>
-                    <p>Programas: Home Care, Paliativos, Optometría</p>
+                
+                <div class="contact-card-horizontal">
+                    <div class="contact-card-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Sede 34 - San Ignacio</h3>
+                    </div>
+                    <div class="contact-card-body">
+                        <p><strong>Dirección:</strong> Cra. 29 # 12A-13</p>
+                        <p><strong>Teléfonos:</strong></p>
+                        <p>Optometría: 316 1194930</p>
+                        <p>Home Care: 3008742340</p>
+                        <p>Cuidados Paliativos: 3016012706</p>
+                        <p><strong>Emails:</strong></p>
+                        <p><a href="mailto:opticaconexions@gmail.com">Optometría</a></p>
+                        <p><a href="mailto:conexionsaludhomecare@gmail.com">Home Care</a></p>
+                        <p><a href="mailto:conexionsaludipsb24x@gmail.com">B24X</a></p>
+                        <p><strong>Programas:</strong> Home Care, Paliativos, Optometría</p>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Sede 35 - La Aurora</h3>
-                    <p>Calle 12 #35-38, Edificio Coomeva 3er piso</p>
-                    <p>Teléfonos: 3207914983 - 3158976866</p>
-                    <p>Email: <a href="mailto:artritisar@gmail.com">artritisar@gmail.com</a></p>
-                    <p>Programas: Artritis, Laboratorio Clínico</p>
+                
+                <div class="contact-card-horizontal">
+                    <div class="contact-card-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Sede 35 - La Aurora</h3>
+                    </div>
+                    <div class="contact-card-body">
+                        <p><strong>Dirección:</strong> Calle 12 #35-38, Edificio Coomeva 3er piso</p>
+                        <p><strong>Teléfonos:</strong> 3207914983 - 3158976866</p>
+                        <p><strong>Email:</strong> <a href="mailto:artritisar@gmail.com">artritisar@gmail.com</a></p>
+                        <p><strong>Programas:</strong> Artritis, Laboratorio Clínico</p>
+                    </div>
                 </div>
-                <div class="contact-card">
+            </div>
+            
+            <div class="contact-card-horizontal horarios-card">
+                <div class="contact-card-header">
                     <i class="fas fa-clock"></i>
-                    <h3>Horarios</h3>
-                    <p>Lunes a Viernes:</p>
-                    <p>7:00 AM - 5:00 PM</p>
-                    <p>Sábados:</p>
-                    <p> 8:00 AM - 12:00 PM</p>
+                    <h3>Horarios de Atención</h3>
+                </div>
+                <div class="contact-card-body">
+                    <p><strong>Lunes a Viernes:</strong> 7:00 AM - 5:00 PM</p>
+                    <p><strong>Sábados:</strong> 8:00 AM - 12:00 PM</p>
                 </div>
             </div>
         </div>
@@ -133,13 +152,6 @@
                         <!-- Aquí mostramos el estado del formulario -->
                         <div id="form-status" style="margin-top: 10px; font-weight: bold;"></div>
                     </form>
-                </div>
-
-                <div class="map-container">
-                    <h2>Nuestra Ubicación - Sede Administrativa</h2>
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7982310558584!2d-77.28722668524858!3d1.2154833989202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTInNTUuNyJOIDc3wrAxNycwNi4xIlc!5e0!3m2!1ses!2sco!4v1621436289012!5m2!1ses!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
                 </div>
             </div>
         </div>

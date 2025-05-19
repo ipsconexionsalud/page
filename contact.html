@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Conexión Salud Maesvi - Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="Logo Fundación Conexión Salud Maesvi">
+                </a>
+            </div>
+            <nav>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="services.html">Nuestros Servicios</a></li>
+                    <li><a href="programas.html">Nuestros Programas</a></li>
+                    <li><a href="sedes.html">Nuestras Sedes</a></li>
+                    <li><a href="documents.html">Documentos</a></li>
+                    <li><a href="contact.html" class="active">Contacto</a></li>
+                    <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Estamos aquí para atender sus consultas y necesidades</p>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <h2>Nuestras Sedes</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Sede 22 - San Ignacio</h3>
+                    <p>Calle 13 #30a-26</p>
+                    <p>Teléfonos: 3218080610 - 3017042805</p>
+                    <p>Email: <a href="mailto:conexionsaludipsb24x@gmail.com">B24X</a></p>
+                    <p>Programas: B24X</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Sede 34 - San Ignacio</h3>
+                    <p>Cra. 29 # 12A-13</p>
+                    <p>Teléfonos:</p>
+                    <p>Optometría: 316 1194930</p>
+                    <p>Home Care: 3008742340</p>
+                    <p>Cuidados Paliativos: 3016012706</p>
+                    <p>Emails:</p>
+                    <p><a href="mailto:opticaconexions@gmail.com">Optometría</a></p>
+                    <p><a href="mailto:conexionsaludhomecare@gmail.com">Home Care</a></p>
+                    <p><a href="mailto:conexionsaludipsb24x@gmail.com">B24X</a></p>
+                    <p>Programas: Home Care, Paliativos, Optometría</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Sede 35 - La Aurora</h3>
+                    <p>Calle 12 #35-38, Edificio Coomeva 3er piso</p>
+                    <p>Teléfonos: 3207914983 - 3158976866</p>
+                    <p>Email: <a href="mailto:artritisar@gmail.com">artritisar@gmail.com</a></p>
+                    <p>Programas: Artritis, Laboratorio Clínico</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horarios</h3>
+                    <p>Lunes a Viernes:</p>
+                    <p>7:00 AM - 5:00 PM</p>
+                    <p>Sábados:</p>
+                    <p> 8:00 AM - 12:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="form-container">
+                    <h2>Envíenos un Mensaje</h2>
+                    <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/xrbqjonn">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Seleccione una opción</option>
+                                <option value="cita">Solicitud de Cita</option>
+                                <option value="info">Información de Servicios</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn">Enviar Mensaje</button>
+                        </div>
+
+                        <!-- Aquí mostramos el estado del formulario -->
+                        <div id="form-status" style="margin-top: 10px; font-weight: bold;"></div>
+                    </form>
+                </div>
+
+                <div class="map-container">
+                    <h2>Nuestra Ubicación - Sede Administrativa</h2>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7982310558584!2d-77.28722668524858!3d1.2154833989202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTInNTUuNyJOIDc3wrAxNycwNi4xIlc!5e0!3m2!1ses!2sco!4v1621436289012!5m2!1ses!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agrega este script justo antes de cerrar el body -->
+    <script>
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    headers: { "Accept": "application/json" },
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    status.innerText = "¡Mensaje enviado con éxito!";
+                    status.style.color = "green";
+                    form.reset();
+                } else {
+                    const result = await response.json();
+                    status.innerText = result.error || "Ocurrió un error. Inténtalo de nuevo.";
+                    status.style.color = "red";
+                }
+            } catch (error) {
+                status.innerText = "Error de red. Inténtalo más tarde.";
+                status.style.color = "red";
+            }
+        });
+    </script>
+
+    <section class="social-connect">
+        <div class="container">
+            <h2>Conéctate con Nosotros</h2>
+            <p>Síguenos en nuestras redes sociales para estar al tanto de noticias, consejos de salud y eventos especiales.</p>
+            <div class="social-grid">
+                <a href="https://www.facebook.com/profile.php?id=61558642860971&locale=es_LA" target="_blank" class="social-link facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/Ipsconexionsalud" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">¿Cómo puedo agendar una cita?</button>
+                    <div class="accordion-content">
+                        <p>Puede agendar una cita llamando a nuestro número de teléfono 316 1194930, enviando un correo electrónico a conexion.salud2023@gmail.com o completando el formulario de contacto en esta página. También puede visitar nuestras instalaciones y solicitar una cita personalmente.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">¿Qué documentos debo llevar a mi cita?</button>
+                    <div class="accordion-content">
+                        <p>Debe traer su documento de identidad, carnet de afiliación a su EPS o seguro médico, y cualquier resultado de exámenes previos o historia clínica relevante para su consulta.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">¿Ofrecen servicios a domicilio?</button>
+                    <div class="accordion-content">
+                        <p>Sí, ofrecemos servicios de rehabilitación domiciliaria y atención domiciliaria para pacientes con movilidad reducida o que requieren atención continua. También realizamos toma de muestras de laboratorio a domicilio. Consulte disponibilidad y costos adicionales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fundación Conexión Salud Maesvi</h3>
+                    <p>Comprometidos con su bienestar y salud integral.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Nosotros</a></li>
+                        <li><a href="services.html">Nuestros Servicios</a></li>
+                        <li><a href="programas.html">Nuestros Programas</a></li>
+                        <li><a href="sedes.html">Nuestras Sedes</a></li>
+                        <li><a href="documents.html">Documentos</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Cra. 29 # 12A-13, Pasto - Nariño</p>
+                    <p><i class="fas fa-phone"></i> Teléfono: 316 1194930</p>
+                    <p><i class="fas fa-envelope"></i> Email: conexion.salud2023@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61558642860971&locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/Ipsconexionsalud" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Fundación Conexión Salud Maesvi. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

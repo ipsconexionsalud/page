@@ -6,15 +6,15 @@
     <title>Fundación Conexión Salud Maesvi - Nuestros Programas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="logo.jpg" alt="Logo Fundación Conexión Salud Maesvi">
-                    </a>
+                <div class="site-title">
+                    <h1>Conexión Salud</h1>
                 </div>
                 <nav>
                     <input type="checkbox" id="menu-toggle">
@@ -37,77 +37,129 @@
     </header>
 
     <section class="page-header">
+        <div class="page-header-overlay"></div>
         <div class="container">
-            <h2>Nuestros Programas</h2>
-            <p>Conoce nuestros programas especializados para el cuidado integral de la salud</p>
+            <h2 class="animate__animated animate__fadeIn">Nuestros Programas</h2>
+            <p class="animate__animated animate__fadeIn">Conoce nuestros programas especializados para el cuidado integral de la salud</p>
         </div>
     </section>
+
+    <div class="wave-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
 
     <section class="programs-intro">
         <div class="container">
             <div class="programs-content">
                 <div class="programs-text">
-                    <h2>Programas Especializados</h2>
-                    <p>En Fundación Conexión Salud Maesvi, hemos desarrollado programas especializados para atender las necesidades específicas de nuestros pacientes, ofreciendo un enfoque integral y personalizado para cada condición.</p>
-                    <p>Nuestros programas están diseñados por equipos multidisciplinarios que trabajan de manera coordinada para brindar la mejor atención posible, mejorando la calidad de vida de nuestros pacientes.</p>
+                    <h2 class="animate__animated animate__fadeIn">Programas Especializados</h2>
+                    <div class="underline"></div>
+                    <p class="animate__animated animate__fadeIn">En Fundación Conexión Salud Maesvi, hemos desarrollado programas especializados para atender las necesidades específicas de nuestros pacientes, ofreciendo un enfoque integral y personalizado para cada condición.</p>
+                    <p class="animate__animated animate__fadeIn">Nuestros programas están diseñados por equipos multidisciplinarios que trabajan de manera coordinada para brindar la mejor atención posible, mejorando la calidad de vida de nuestros pacientes.</p>
                 </div>
-                <div class="programs-image">
+                <div class="programs-image animate__animated animate__fadeInRight">
                     <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Programas especializados">
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="wave-divider wave-divider-flip">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f8f9fa" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
     <section class="programs-by-sede">
         <div class="container">
-            <h2>Programas por Sede</h2>
+            <div class="section-header">
+                <h2 class="animate__animated animate__fadeIn">Programas por Sede</h2>
+                <div class="underline"></div>
+            </div>
             
             <div class="sede-programs">
-                <h3>Sede 22 - San Ignacio</h3>
+                <div class="sede-header animate__animated animate__fadeIn">
+                    <div class="sede-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Sede 22 - San Ignacio</h3>
+                </div>
                 <div class="program-grid">
-                    <div class="program-card" onclick="openProgramModal('b24x-modal')">
-                        <i class="fas fa-heartbeat"></i>
-                        <h3>B24X</h3>
-                        <p>Programa enfocado en la atención integral de pacientes con enfermedades crónicas y de alto costo.</p>
-                        <span class="btn-more">Ver más</span>
+                    <div class="program-card animate__animated animate__fadeInUp" onclick="openProgramModal('b24x-modal')">
+                        <div class="program-card-inner">
+                            <div class="program-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>B24X</h3>
+                            <p>Programa enfocado en la atención integral de pacientes con enfermedades crónicas y de alto costo.</p>
+                            <span class="btn-more">Ver más <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="sede-programs">
-                <h3>Sede 34 - San Ignacio</h3>
+                <div class="sede-header animate__animated animate__fadeIn">
+                    <div class="sede-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Sede 34 - San Ignacio</h3>
+                </div>
                 <div class="program-grid">
-                    <div class="program-card" onclick="openProgramModal('paliativos-modal')">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <h3>Cuidados Paliativos</h3>
-                        <p>Programa diseñado para mejorar la calidad de vida de pacientes con enfermedades graves o terminales.</p>
-                        <span class="btn-more">Ver más</span>
+                    <div class="program-card animate__animated animate__fadeInUp" onclick="openProgramModal('paliativos-modal')">
+                        <div class="program-card-inner">
+                            <div class="program-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h3>Cuidados Paliativos</h3>
+                            <p>Programa diseñado para mejorar la calidad de vida de pacientes con enfermedades graves o terminales.</p>
+                            <span class="btn-more">Ver más <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
                     
-                    <div class="program-card" onclick="openProgramModal('homecare-modal')">
-                        <i class="fas fa-home"></i>
-                        <h3>Home Care</h3>
-                        <p>Servicios médicos y de enfermería profesionales en la comodidad del hogar del paciente.</p>
-                        <span class="btn-more">Ver más</span>
+                    <div class="program-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s" onclick="openProgramModal('homecare-modal')">
+                        <div class="program-card-inner">
+                            <div class="program-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Home Care</h3>
+                            <p>Servicios médicos y de enfermería profesionales en la comodidad del hogar del paciente.</p>
+                            <span class="btn-more">Ver más <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
                     
-                    <div class="program-card" onclick="openProgramModal('optometria-modal')">
-                        <i class="fas fa-eye"></i>
-                        <h3>Optometría</h3>
-                        <p>Servicios completos para el cuidado de la salud visual, desde exámenes de rutina hasta el manejo de condiciones oculares.</p>
-                        <span class="btn-more">Ver más</span>
+                    <div class="program-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s" onclick="openProgramModal('optometria-modal')">
+                        <div class="program-card-inner">
+                            <div class="program-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Optometría</h3>
+                            <p>Servicios completos para el cuidado de la salud visual, desde exámenes de rutina hasta el manejo de condiciones oculares.</p>
+                            <span class="btn-more">Ver más <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="sede-programs">
-                <h3>Sede 35 - La Aurora</h3>
+                <div class="sede-header animate__animated animate__fadeIn">
+                    <div class="sede-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Sede 35 - La Aurora</h3>
+                </div>
                 <div class="program-grid">
-                    <div class="program-card" onclick="openProgramModal('artritis-modal')">
-                        <i class="fas fa-bone"></i>
-                        <h3>Artritis</h3>
-                        <p>Programa diseñado para el manejo integral de pacientes con enfermedades reumáticas.</p>
-                        <span class="btn-more">Ver más</span>
+                    <div class="program-card animate__animated animate__fadeInUp" onclick="openProgramModal('artritis-modal')">
+                        <div class="program-card-inner">
+                            <div class="program-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <h3>Artritis</h3>
+                            <p>Programa diseñado para el manejo integral de pacientes con enfermedades reumáticas.</p>
+                            <span class="btn-more">Ver más <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -116,73 +168,183 @@
 
     <!-- Modales de Programas -->
     <div id="b24x-modal" class="program-modal">
-        <div class="modal-content">
+        <div class="modal-content animate__animated animate__zoomIn">
             <span class="close-modal" onclick="closeProgramModal('b24x-modal')">&times;</span>
-            <h2>B24X</h2>
-            <p>El programa B24X está enfocado en la atención integral de pacientes con enfermedades crónicas y de alto costo, proporcionando un manejo especializado y personalizado para cada caso.</p>
-            <p>Nuestro equipo multidisciplinario trabaja en la prevención, diagnóstico, tratamiento y seguimiento de estas condiciones, con el objetivo de mejorar la calidad de vida del paciente y reducir las complicaciones asociadas. Ofrecemos educación al paciente y su familia, apoyo psicológico, y coordinación con especialistas para garantizar una atención completa.</p>
-            <p><strong>Sede:</strong> Sede 22 - San Ignacio</p>
-            <p><strong>Contacto:</strong> 3218080610 - 3017042805</p>
-            <p><strong>Email:</strong> <a href="mailto:conexionsaludipsb24x@gmail.com">conexionsaludipsb24x@gmail.com</a></p>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h2>B24X</h2>
+            </div>
+            <div class="modal-body">
+                <p>El programa B24X está enfocado en la atención integral de pacientes con enfermedades crónicas y de alto costo, proporcionando un manejo especializado y personalizado para cada caso.</p>
+                <p>Nuestro equipo multidisciplinario trabaja en la prevención, diagnóstico, tratamiento y seguimiento de estas condiciones, con el objetivo de mejorar la calidad de vida del paciente y reducir las complicaciones asociadas. Ofrecemos educación al paciente y su familia, apoyo psicológico, y coordinación con especialistas para garantizar una atención completa.</p>
+                <div class="modal-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Sede:</strong> Sede 22 - San Ignacio</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><strong>Contacto:</strong> 3218080610 - 3017042805</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><strong>Email:</strong> <a href="mailto:conexionsaludipsb24x@gmail.com">conexionsaludipsb24x@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="contact.html" class="btn btn-primary">Solicitar Información</a>
+            </div>
         </div>
     </div>
 
     <div id="paliativos-modal" class="program-modal">
-        <div class="modal-content">
+        <div class="modal-content animate__animated animate__zoomIn">
             <span class="close-modal" onclick="closeProgramModal('paliativos-modal')">&times;</span>
-            <h2>Cuidados Paliativos</h2>
-            <p>Nuestro programa de Cuidados Paliativos está diseñado para mejorar la calidad de vida de pacientes que enfrentan enfermedades graves o terminales, aliviando el dolor y otros síntomas angustiantes.</p>
-            <p>Ofrecemos un enfoque integral que aborda no solo las necesidades físicas, sino también las emocionales, sociales y espirituales del paciente y su familia. Nuestro equipo multidisciplinario trabaja en conjunto para proporcionar el mejor cuidado posible, respetando la dignidad y autonomía del paciente.</p>
-            <p><strong>Sede:</strong> Sede 34 - San Ignacio</p>
-            <p><strong>Contacto:</strong> 3016012706</p>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h2>Cuidados Paliativos</h2>
+            </div>
+            <div class="modal-body">
+                <p>Nuestro programa de Cuidados Paliativos está diseñado para mejorar la calidad de vida de pacientes que enfrentan enfermedades graves o terminales, aliviando el dolor y otros síntomas angustiantes.</p>
+                <p>Ofrecemos un enfoque integral que aborda no solo las necesidades físicas, sino también las emocionales, sociales y espirituales del paciente y su familia. Nuestro equipo multidisciplinario trabaja en conjunto para proporcionar el mejor cuidado posible, respetando la dignidad y autonomía del paciente.</p>
+                <div class="modal-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Sede:</strong> Sede 34 - San Ignacio</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><strong>Contacto:</strong> 3016012706</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="contact.html" class="btn btn-primary">Solicitar Información</a>
+            </div>
         </div>
     </div>
 
     <div id="homecare-modal" class="program-modal">
-        <div class="modal-content">
+        <div class="modal-content animate__animated animate__zoomIn">
             <span class="close-modal" onclick="closeProgramModal('homecare-modal')">&times;</span>
-            <h2>Home Care</h2>
-            <p>El programa Home Care ofrece servicios médicos y de enfermería profesionales en la comodidad del hogar del paciente, especialmente diseñado para aquellos con movilidad reducida o que requieren atención continua.</p>
-            <p>Nuestros servicios incluyen visitas médicas domiciliarias, cuidados de enfermería, terapias físicas y respiratorias, administración de medicamentos, y seguimiento de tratamientos. Trabajamos en estrecha colaboración con el paciente, su familia y su médico tratante para garantizar una atención coordinada y de calidad.</p>
-            <p><strong>Sede:</strong> Sede 34 - San Ignacio</p>
-            <p><strong>Contacto:</strong> 3008742340</p>
-            <p><strong>Email:</strong> <a href="mailto:conexionsaludhomecare@gmail.com">conexionsaludhomecare@gmail.com</a></p>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h2>Home Care</h2>
+            </div>
+            <div class="modal-body">
+                <p>El programa Home Care ofrece servicios médicos y de enfermería profesionales en la comodidad del hogar del paciente, especialmente diseñado para aquellos con movilidad reducida o que requieren atención continua.</p>
+                <p>Nuestros servicios incluyen visitas médicas domiciliarias, cuidados de enfermería, terapias físicas y respiratorias, administración de medicamentos, y seguimiento de tratamientos. Trabajamos en estrecha colaboración con el paciente, su familia y su médico tratante para garantizar una atención coordinada y de calidad.</p>
+                <div class="modal-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Sede:</strong> Sede 34 - San Ignacio</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><strong>Contacto:</strong> 3008742340</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><strong>Email:</strong> <a href="mailto:conexionsaludhomecare@gmail.com">conexionsaludhomecare@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="contact.html" class="btn btn-primary">Solicitar Información</a>
+            </div>
         </div>
     </div>
 
     <div id="optometria-modal" class="program-modal">
-        <div class="modal-content">
+        <div class="modal-content animate__animated animate__zoomIn">
             <span class="close-modal" onclick="closeProgramModal('optometria-modal')">&times;</span>
-            <h2>Optometría</h2>
-            <p>El programa de Optometría ofrece servicios completos para el cuidado de la salud visual, desde exámenes de rutina hasta el manejo de condiciones oculares complejas.</p>
-            <p>Nuestros optómetras profesionales realizan evaluaciones visuales completas, prescriben correcciones visuales, y detectan problemas oculares en etapas tempranas. También ofrecemos asesoramiento sobre el cuidado de los ojos, prevención de enfermedades oculares, y adaptación de lentes de contacto. Trabajamos en coordinación con oftalmólogos para casos que requieren atención especializada.</p>
-            <p><strong>Sede:</strong> Sede 34 - San Ignacio</p>
-            <p><strong>Contacto:</strong> 316 1194930</p>
-            <p><strong>Email:</strong> <a href="mailto:opticaconexions@gmail.com">opticaconexions@gmail.com</a></p>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2>Optometría</h2>
+            </div>
+            <div class="modal-body">
+                <p>El programa de Optometría ofrece servicios completos para el cuidado de la salud visual, desde exámenes de rutina hasta el manejo de condiciones oculares complejas.</p>
+                <p>Nuestros optómetras profesionales realizan evaluaciones visuales completas, prescriben correcciones visuales, y detectan problemas oculares en etapas tempranas. También ofrecemos asesoramiento sobre el cuidado de los ojos, prevención de enfermedades oculares, y adaptación de lentes de contacto. Trabajamos en coordinación con oftalmólogos para casos que requieren atención especializada.</p>
+                <div class="modal-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Sede:</strong> Sede 34 - San Ignacio</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><strong>Contacto:</strong> 316 1194930</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><strong>Email:</strong> <a href="mailto:opticaconexions@gmail.com">opticaconexions@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="contact.html" class="btn btn-primary">Solicitar Información</a>
+            </div>
         </div>
     </div>
 
     <div id="artritis-modal" class="program-modal">
-        <div class="modal-content">
+        <div class="modal-content animate__animated animate__zoomIn">
             <span class="close-modal" onclick="closeProgramModal('artritis-modal')">&times;</span>
-            <h2>Artritis</h2>
-            <p>Nuestro programa de Artritis está diseñado para el manejo integral de pacientes con enfermedades reumáticas, ofreciendo diagnóstico temprano, tratamiento oportuno y seguimiento continuo para mejorar la calidad de vida.</p>
-            <p>Contamos con un equipo de especialistas en reumatología, fisiatría, fisioterapia y psicología que trabajan de manera coordinada para abordar todos los aspectos de la enfermedad. Ofrecemos terapias físicas, manejo del dolor, educación al paciente sobre su condición, y estrategias para mantener la funcionalidad y prevenir la progresión de la enfermedad.</p>
-            <p><strong>Sede:</strong> Sede 35 - La Aurora, Edificio Coomeva 3er piso</p>
-            <p><strong>Contacto:</strong> 3207914983 - 3158976866</p>
-            <p><strong>Email:</strong> <a href="mailto:artritisar@gmail.com">artritisar@gmail.com</a></p>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <h2>Artritis</h2>
+            </div>
+            <div class="modal-body">
+                <p>Nuestro programa de Artritis está diseñado para el manejo integral de pacientes con enfermedades reumáticas, ofreciendo diagnóstico temprano, tratamiento oportuno y seguimiento continuo para mejorar la calidad de vida.</p>
+                <p>Contamos con un equipo de especialistas en reumatología, fisiatría, fisioterapia y psicología que trabajan de manera coordinada para abordar todos los aspectos de la enfermedad. Ofrecemos terapias físicas, manejo del dolor, educación al paciente sobre su condición, y estrategias para mantener la funcionalidad y prevenir la progresión de la enfermedad.</p>
+                <div class="modal-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Sede:</strong> Sede 35 - La Aurora, Edificio Coomeva 3er piso</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><strong>Contacto:</strong> 3207914983 - 3158976866</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><strong>Email:</strong> <a href="mailto:artritisar@gmail.com">artritisar@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="contact.html" class="btn btn-primary">Solicitar Información</a>
+            </div>
         </div>
     </div>
 
     <section class="cta">
+        <div class="cta-overlay"></div>
         <div class="container">
-            <h2>¿Necesita más información sobre nuestros programas?</h2>
-            <p>Contáctenos para resolver sus dudas o agendar una cita con nuestros especialistas.</p>
-            <a href="contact.html" class="btn">Contactar Ahora</a>
+            <div class="cta-content animate__animated animate__fadeIn">
+                <h2>¿Necesita más información sobre nuestros programas?</h2>
+                <p>Contáctenos para resolver sus dudas o agendar una cita con nuestros especialistas.</p>
+                <a href="contact.html" class="btn btn-light pulse-animation">Contactar Ahora</a>
+            </div>
         </div>
     </section>
 
     <footer>
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#0a2a7a" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,202.7C672,203,768,181,864,186.7C960,192,1056,224,1152,218.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">

@@ -2143,6 +2143,42 @@ footer {
   }
 }
 
+/* Estilos para el ícono de WhatsApp */
+.social-link.whatsapp {
+  position: relative;
+  cursor: pointer;
+}
+
+.social-link.whatsapp i {
+  background: linear-gradient(45deg, #25D366, #128C7E);
+}
+
+.social-link.whatsapp:hover i {
+  background: linear-gradient(45deg, #128C7E, #075E54);
+}
+
+.sede-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 160px;
+  padding: 8px;
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 0.9em;
+  z-index: 100;
+  box-shadow: var(--card-shadow);
+}
+
+.sede-dropdown option {
+  padding: 8px;
+}
+
+/* Modificar la función JavaScript para mostrar/ocultar el dropdown */
 @media (max-width: 576px) {
   .form-container {
     padding: 20px;

@@ -206,7 +206,7 @@
         });
     </script>
 
-    <section class="social-connect">
+    <!--<section class="social-connect">
         <div class="container">
             <div class="section-header">
                 <h2 class="animate__animated animate__fadeIn">Conéctate con Nosotros</h2>
@@ -238,7 +238,39 @@
                     </div>
             </div>
         </div>
-    </section>
+    </section>-->
+<section class="social-connect">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="animate__animated animate__fadeIn">Conéctate con Nosotros</h2>
+            <div class="underline"></div>
+        </div>
+        <p class="text-center animate__animated animate__fadeIn">Síguenos en nuestras redes sociales para estar al tanto de noticias, consejos de salud y eventos especiales.</p>
+        <div class="social-grid">
+            <a href="https://www.facebook.com/profile.php?id=61558642860971&locale=es_LA" target="_blank" class="social-link facebook animate__animated animate__fadeInUp">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/Ipsconexionsalud" target="_blank" class="social-link instagram animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <div class="social-link whatsapp animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                <i class="fab fa-whatsapp" onclick="toggleSedeSelector()"></i>
+                <span>WhatsApp</span>
+                <select
+                    id="sedeSelector"
+                    onchange="redirigirWhatsApp()"
+                    class="sede-dropdown">
+                    <option value="" disabled selected>Selecciona sede</option>
+                    <option value="22">Sede 22 - B24X</option>
+                    <option value="34">Sede 34 - OPTOMERIA</option>
+                    <option value="35">Sede 35 - ARTRITIS</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section class="faq">
         <div class="container">

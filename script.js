@@ -146,28 +146,30 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// WhatsApp sede selector toggle
 function toggleSedeSelector() {
   const selector = document.getElementById("sedeSelector");
-  selector.style.display = selector.style.display === "none" ? "block" : "none";
+  if (selector.style.display === "none" || selector.style.display === "") {
+    selector.style.display = "inline-block";
+  } else {
+    selector.style.display = "none";
+    selector.selectedIndex = 0; // reset selección si se cierra
+  }
 }
 
-// Redirigir según sede seleccionada
 function redirigirWhatsApp() {
   const selector = document.getElementById("sedeSelector");
   const sede = selector.value;
 
   const enlaces = {
-    "22": "https://wa.me/573218080610",
-    "34": "https://wa.me/573161194930",
-    "35": "https://wa.me/573153150250"
+    "22": "https://wa.me/573001112222",
+    "34": "https://wa.me/573003334444",
+    "35": "https://wa.me/573005556666"
   };
 
   if (sede && enlaces[sede]) {
     window.open(enlaces[sede], "_blank");
   }
 
-  // Oculta y reinicia el selector
-  selector.selectedIndex = 0;
   selector.style.display = "none";
+  selector.selectedIndex = 0;
 }

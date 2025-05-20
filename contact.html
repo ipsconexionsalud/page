@@ -222,6 +222,20 @@
                     <i class="fab fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
+                <div style="position: relative;">
+                      <a href="javascript:void(0)" onclick="toggleSedeSelector()" title="Contactar por WhatsApp">
+                        <i class="fa-brands fa-whatsapp"> </i>
+                      </a>
+                      <select
+                        id="sedeSelector"
+                        onchange="redirigirWhatsApp()"
+                        style="position: absolute; top: 45px; left: 0; display: none; font-size: 0.9em; min-width: 160px; z-index: 100;">
+                        <option value="" disabled selected>Selecciona sede</option>
+                        <option value="22">Sede 22 - B24X</option>
+                        <option value="34">Sede 34 - OPTOMERIA</option>
+                        <option value="35">Sede 35 - ARTRITIS</option>
+                      </select>
+                    </div>
             </div>
         </div>
     </section>

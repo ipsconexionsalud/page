@@ -777,7 +777,7 @@ nav .menu li a.active {
 
 .sede-header h3 {
   margin-bottom: 0;
-  color: var(--primary-color);
+  color: var(--background-color);
   font-size: 1.8rem;
 }
 

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 </head>
 <body>
     <header>
@@ -221,7 +223,7 @@
                     <p><i class="fas fa-phone-alt"></i> Teléfono: 316 1194930</p>
                     <p><i class="fas fa-envelope"></i> Email: conexion.salud2023@gmail.com</p>
                 </div>
-                <div class="footer-section">
+                <!--<div class="footer-section">
                     <h3>Síguenos</h3>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/profile.php?id=61558642860971&locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -229,14 +231,40 @@
                         <div style="display: inline-block; position: relative;">
                             <i class="fab fa-whatsapp" style="cursor: pointer; font-size: 1.5em;" onclick="toggleSedeSelector()"></i>
                             <select id="sedeSelector" onchange="redirigirWhatsApp()" style="position: absolute; top: 25px; left: -10px; display: none; font-size: 0.9em;">
-                            <option value="">Selecciona sede</option>
-                            <option value="22">Sede 22 - B24X</option>
-                            <option value="34">Sede 34 - OPTOMERIA</option>
-                            <option value="35">Sede 35 - ARTRITIS</option>
-        </select>
-    </div>
+                                <option value="">Selecciona sede</option>
+                                <option value="22">Sede 22 - B24X</option>
+                                <option value="34">Sede 34 - OPTOMERIA</option>
+                                <option value="35">Sede 35 - ARTRITIS</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
+                </div>-->
+
+                <div class="footer-section">
+                  <h3>Síguenos</h3>
+                  <div class="social-icons">
+                  <a href="https://www.facebook.com/profile.php?id=61558642860971&locale=es_LA" target="_blank">
+                      <i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/Ipsconexionsalud" target="_blank">
+                  <i class="fab fa-instagram"></i></a>
+                  <div style="display: inline-block; position: relative;">
+                  <i
+                    class="fab fa-whatsapp"
+                    style="cursor: pointer; font-size: 1.5em;"
+                    onclick="toggleSedeSelector()"
+                    title="Contactar por WhatsApp"></i>
+                  <select
+                  id="sedeSelector"
+        onchange="redirigirWhatsApp()"
+        style="position: absolute; top: 25px; left: -10px; display: none; font-size: 0.9em;">
+        <option value="" disabled selected>Selecciona sede</option>
+        <option value="22">Sede 22 - B24X</option>
+        <option value="34">Sede 34 - OPTOMERIA</option>
+        <option value="35">Sede 35 - ARTRITIS</option>
+                  </select>
+    </div>
+  </div>
+</div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2023 Fundación Conexión Salud Maesvi. Todos los derechos reservados.</p>

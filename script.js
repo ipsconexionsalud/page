@@ -11,7 +11,7 @@ function initCarousel() {
     // Auto slide every 5 seconds
     setInterval(() => {
       moveCarousel(1)
-    }, 5000)
+    }, 8000)
   }
 }
 

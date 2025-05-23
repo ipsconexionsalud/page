@@ -976,10 +976,27 @@ nav .menu li a.active {
   gap: 15px;
 }
 
+.sede-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
 .sede-header h2 {
   margin-bottom: 0;
   color: white;
   font-size: 1.8rem;
+}
+
+.ciudad-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .sede-content {
@@ -1254,6 +1271,12 @@ footer {
     align-items: center;
     text-align: center;
   }
+
+  .sede-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1296,6 +1319,16 @@ footer {
 
   .modal-info {
     grid-template-columns: 1fr;
+  }
+
+  .sede-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .sede-title {
+    width: 100%;
   }
 }
 
@@ -1385,7 +1418,7 @@ footer {
 
 .mission-card p::after,
 .vision-card p::after {
-  content: """;
+  content: "";
   font-size: 3rem;
   position: absolute;
   bottom: -40px;
@@ -2211,25 +2244,6 @@ footer {
 .job-carousel-section .carousel-control.next {
   right: 10px;
 }
-/* Modificar la función JavaScript para mostrar/ocultar el dropdown */
-@media (max-width: 576px) {
-  .form-container {
-    padding: 20px;
-  }
-
-  .policy-card,
-  .rights-card,
-  .duties-card,
-  .service-card,
-  .document-card,
-  .benefit-card {
-    padding: 20px;
-  }
-}
-padding: 20px
-;
-  }
-}
 
 /* ===== ESTILOS PARA CONSULTA-EXAMENES.HTML ===== */
 
@@ -2568,6 +2582,19 @@ padding: 20px
 }
 
 @media (max-width: 576px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .policy-card,
+  .rights-card,
+  .duties-card,
+  .service-card,
+  .document-card,
+  .benefit-card {
+    padding: 20px;
+  }
+
   .consulta-card {
     padding: 20px;
   }

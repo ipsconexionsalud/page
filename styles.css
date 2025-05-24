@@ -290,7 +290,7 @@ nav {
 nav .menu {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 

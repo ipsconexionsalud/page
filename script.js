@@ -84,6 +84,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   accordionHeaders.forEach((header) => {
     header.addEventListener("click", function () {
+      // Close all other accordions
+      accordionHeaders.forEach((otherHeader) => {
+        if (otherHeader !== this) {
+          otherHeader.classList.remove("active")
+          const otherContent = otherHeader.nextElementSibling
+          if (otherContent) {
+            otherContent.style.maxHeight = null
+          }
+        }
+      })
+
       // Toggle active class on the header
       this.classList.toggle("active")
 
@@ -143,33 +154,201 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Run on scroll
   window.addEventListener("scroll", animateOnScroll)
+
+  // Smooth scrolling for anchor links
+  const anchorLinks = document.querySelectorAll('a[href^="#"]')
+  anchorLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault()
+      const targetId = link.getAttribute("href").substring(1)
+      const targetElement = document.getElementById(targetId)
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    })
+  })
+
+  // Mobile menu close on link click
+  const menuLinks = document.querySelectorAll("nav .menu li a")
+  const menuToggle = document.getElementById("menu-toggle")
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 992) {
+        menuToggle.checked = false
+      }
+    })
+  })
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (e) => {
+    const nav = document.querySelector("nav")
+    const menuIcon = document.querySelector(".menu-icon")
+
+    if (window.innerWidth <= 992 && menuToggle.checked) {
+      if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
+        menuToggle.checked = false
+      }
+    }
+  })
+
+  // Form validation and enhancement
+  const contactForm = document.getElementById("contact-form")
+  if (contactForm) {
+    const inputs = contactForm.querySelectorAll("input, select, textarea")
+
+    inputs.forEach((input) => {
+      // Add focus and blur effects
+      input.addEventListener("focus", () => {
+        input.parentElement.classList.add("focused")
+      })
+
+      input.addEventListener("blur", () => {
+        input.parentElement.classList.remove("focused")
+        if (input.value.trim() !== "") {
+          input.parentElement.classList.add("filled")
+        } else {
+          input.parentElement.classList.remove("filled")
+        }
+      })
+    })
+  }
+
+  // Lazy loading for images
+  const images = document.querySelectorAll("img[data-src]")
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target
+        img.src = img.dataset.src
+        img.classList.remove("lazy")
+        imageObserver.unobserve(img)
+      }
+    })
+  })
+
+  images.forEach((img) => imageObserver.observe(img))
+
+  // Add loading animation to buttons
+  const buttons = document.querySelectorAll(".btn")
+  buttons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      // Add ripple effect
+      const ripple = document.createElement("span")
+      const rect = this.getBoundingClientRect()
+      const size = Math.max(rect.width, rect.height)
+      const x = e.clientX - rect.left - size / 2
+      const y = e.clientY - rect.top - size / 2
+
+      ripple.style.width = ripple.style.height = size + "px"
+      ripple.style.left = x + "px"
+      ripple.style.top = y + "px"
+      ripple.classList.add("ripple")
+
+      this.appendChild(ripple)
+
+      setTimeout(() => {
+        ripple.remove()
+      }, 600)
+    })
+  })
 })
 
-
+// WhatsApp functionality
 function toggleSedeSelector() {
-  const selector = document.getElementById("sedeSelector");
-  if (selector.style.display === "none" || selector.style.display === "") {
-    selector.style.display = "inline-block";
-  } else {
-    selector.style.display = "none";
-    selector.selectedIndex = 0; // reset selección si se cierra
+  const selector = document.getElementById("sedeSelector")
+  if (selector) {
+    if (selector.style.display === "none" || selector.style.display === "") {
+      selector.style.display = "inline-block"
+    } else {
+      selector.style.display = "none"
+      selector.selectedIndex = 0 // reset selección si se cierra
+    }
   }
 }
 
 function redirigirWhatsApp() {
-  const selector = document.getElementById("sedeSelector");
-  const sede = selector.value;
+  const selector = document.getElementById("sedeSelector")
+  if (!selector) return
+
+  const sede = selector.value
 
   const enlaces = {
-    "22": "https://wa.me/573001112222",
-    "34": "https://wa.me/573003334444",
-    "35": "https://wa.me/573005556666"
-  };
-
-  if (sede && enlaces[sede]) {
-    window.open(enlaces[sede], "_blank");
+    22: "https://wa.me/573218080610?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20la%20Sede%2022%20-%20B24X",
+    34: "https://wa.me/573161194930?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20la%20Sede%2034%20-%20Optometría",
+    35: "https://wa.me/573207914983?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20la%20Sede%2035%20-%20Artritis",
   }
 
-  selector.style.display = "none";
-  selector.selectedIndex = 0;
+  if (sede && enlaces[sede]) {
+    window.open(enlaces[sede], "_blank")
+  }
+
+  selector.style.display = "none"
+  selector.selectedIndex = 0
 }
+
+// Utility functions
+function debounce(func, wait) {
+  let timeout
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout)
+      func(...args)
+    }
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
+}
+
+// Optimized scroll handler
+const optimizedScrollHandler = debounce(() => {
+  // Add scroll-based functionality here if needed
+}, 100)
+
+window.addEventListener("scroll", optimizedScrollHandler)
+
+// Add CSS for ripple effect
+const style = document.createElement("style")
+style.textContent = `
+  .btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+  }
+  
+  @keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
+  .form-group.focused input,
+  .form-group.focused select,
+  .form-group.focused textarea {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(10, 42, 122, 0.1);
+  }
+  
+  .lazy {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .lazy.loaded {
+    opacity: 1;
+  }
+`
+document.head.appendChild(style)

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-     <header>
+    <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
@@ -24,7 +24,7 @@
                         <i class="fas fa-bars"></i>
                     </label>
                     <ul class="menu">
-                        <li><a href="index.html" class="active">Inicio</a></li>
+                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="about.html">Sobre Nosotros</a></li>
                         <li><a href="services.html">Nuestros Servicios</a></li>
                         <li><a href="programas.html">Nuestros Programas</a></li>
@@ -32,27 +32,20 @@
                         <li><a href="sedes.html">Nuestras Sedes</a></li>
                         <li><a href="documents.html">Documentos</a></li>
                         <li><a href="contact.html">Contacto</a></li>
-                        <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+                        <li><a href="trabaja.html" class="active">Trabaja con Nosotros</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-     <section class="page-header">
+    <section class="page-header">
         <div class="page-header-overlay"></div>
         <div class="container">
             <h2 class="animate__animated animate__fadeIn">Trabaja con Nosotros</h2>
             <p class="animate__animated animate__fadeIn">Únete a nuestro equipo y desarrolla tu carrera profesional en un ambiente de excelencia</p>
         </div>
     </section>
-    
-    <!--<section class="page-header">
-        <div class="container">
-            <h2>Trabaja con Nosotros</h2>
-            <p></p>
-        </div>
-    </section>-->
     
     <div class="wave-divider">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -63,13 +56,13 @@
     <section class="careers-intro">
         <div class="container">
             <div class="careers-content">
-                <div class="careers-text">
+                <div class="careers-text animate__animated animate__fadeInLeft">
                     <h2>Desarrolla tu Carrera con Nosotros</h2>
                     <p>En Fundación Conexión Salud Maesvi, creemos que nuestro equipo es nuestro activo más valioso. Buscamos profesionales comprometidos, apasionados y con vocación de servicio para unirse a nuestra familia.</p>
                     <p>Ofrecemos un ambiente de trabajo colaborativo, oportunidades de crecimiento profesional y personal, y la satisfacción de contribuir positivamente a la salud y bienestar de nuestra comunidad.</p>
                     <p>Conexión Salud es el lugar perfecto para desarrollarse profesional y personalmente. Aquí valoramos el talento, fomentamos la innovación y trabajamos juntos para brindar la mejor atención a nuestros pacientes. Si buscas un lugar donde tu trabajo marque la diferencia en la vida de las personas, ¡te estamos esperando!</p>
                 </div>
-                <div class="careers-image">
+                <div class="careers-image animate__animated animate__fadeInRight">
                     <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Equipo profesional">
                 </div>
             </div>
@@ -78,13 +71,16 @@
 
     <section class="job-carousel-section">
         <div class="container">
-            <h2>Oportunidades Laborales</h2>
-            <p>Explora nuestras vacantes actuales y encuentra la que mejor se adapte a tu perfil profesional</p>
+            <div class="section-header">
+                <h2 class="animate__animated animate__fadeIn">Oportunidades Laborales</h2>
+                <div class="underline"></div>
+                <p class="animate__animated animate__fadeIn">Explora nuestras vacantes actuales y encuentra la que mejor se adapte a tu perfil profesional</p>
+            </div>
         </div>
         <div class="carousel-container">
             <div class="carousel">
                 <div class="carousel-item active">
-                    <div class="job-card">
+                    <div class="job-card animate__animated animate__fadeInUp">
                         <h3>Médico General</h3>
                         <p><strong>Sede:</strong> Sede 34 - San Ignacio</p>
                         <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
@@ -94,7 +90,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="job-card">
+                    <div class="job-card animate__animated animate__fadeInUp">
                         <h3>Fisioterapeuta</h3>
                         <p><strong>Sede:</strong> Sede 22 - San Ignacio</p>
                         <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
@@ -104,7 +100,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="job-card">
+                    <div class="job-card animate__animated animate__fadeInUp">
                         <h3>Enfermero/a Jefe</h3>
                         <p><strong>Sede:</strong> Sede 35 - La Aurora</p>
                         <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
@@ -114,7 +110,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="job-card">
+                    <div class="job-card animate__animated animate__fadeInUp">
                         <h3>Psicólogo/a</h3>
                         <p><strong>Sede:</strong> Sede 34 - San Ignacio</p>
                         <p><strong>Tipo de contrato:</strong> Medio tiempo</p>
@@ -124,7 +120,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="job-card">
+                    <div class="job-card animate__animated animate__fadeInUp">
                         <h3>Auxiliar de Enfermería</h3>
                         <p><strong>Sede:</strong> Todas las sedes</p>
                         <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
@@ -148,24 +144,27 @@
 
     <section class="benefits-section">
         <div class="container">
-            <h2>Beneficios de Trabajar con Nosotros</h2>
+            <div class="section-header">
+                <h2 class="animate__animated animate__fadeIn">Beneficios de Trabajar con Nosotros</h2>
+                <div class="underline"></div>
+            </div>
             <div class="benefits-grid">
-                <div class="benefit-card">
+                <div class="benefit-card animate__animated animate__fadeInUp">
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Desarrollo Profesional</h3>
                     <p>Ofrecemos capacitación continua y oportunidades de crecimiento dentro de la institución.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
                     <i class="fas fa-users"></i>
                     <h3>Ambiente Laboral</h3>
                     <p>Fomentamos un ambiente de trabajo colaborativo, respetuoso y orientado al trabajo en equipo.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
                     <i class="fas fa-balance-scale"></i>
                     <h3>Equilibrio Vida-Trabajo</h3>
                     <p>Valoramos el bienestar de nuestros colaboradores y promovemos un equilibrio saludable entre la vida personal y laboral.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
                     <i class="fas fa-hand-holding-heart"></i>
                     <h3>Impacto Social</h3>
                     <p>Tu trabajo contribuirá directamente a mejorar la calidad de vida de nuestros pacientes y la comunidad.</p>
@@ -176,30 +175,33 @@
 
     <section class="application-section">
         <div class="container">
-            <h2>¿Cómo Aplicar?</h2>
+            <div class="section-header">
+                <h2 class="animate__animated animate__fadeIn">¿Cómo Aplicar?</h2>
+                <div class="underline"></div>
+            </div>
             <div class="application-steps">
-                <div class="step">
+                <div class="step animate__animated animate__fadeInUp">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Revisa Nuestras Vacantes</h3>
                         <p>Explora las oportunidades laborales disponibles y selecciona la que mejor se adapte a tu perfil profesional.</p>
                     </div>
                 </div>
-                <div class="step">
+                <div class="step animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Envía tu Hoja de Vida</h3>
                         <p>Completa el formulario de contacto o envía tu hoja de vida a <a href="mailto:conexion.salud2023@gmail.com">conexion.salud2023@gmail.com</a> con el asunto "Vacante [Nombre del Cargo]".</p>
                     </div>
                 </div>
-                <div class="step">
+                <div class="step animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Proceso de Selección</h3>
                         <p>Si tu perfil cumple con los requisitos, te contactaremos para continuar con el proceso de selección (entrevistas, pruebas técnicas, etc.).</p>
                     </div>
                 </div>
-                <div class="step">
+                <div class="step animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Bienvenida al Equipo</h3>
@@ -211,10 +213,13 @@
     </section>
 
     <section class="cta">
+        <div class="cta-overlay"></div>
         <div class="container">
-            <h2>¿Listo para unirte a nuestro equipo?</h2>
-            <p>Envíanos tu hoja de vida y forma parte de la familia Conexión Salud Maesvi.</p>
-            <a href="contact.html" class="btn">Contactar Ahora</a>
+            <div class="cta-content animate__animated animate__fadeIn">
+                <h2>¿Listo para unirte a nuestro equipo?</h2>
+                <p>Envíanos tu hoja de vida y forma parte de la familia Conexión Salud Maesvi.</p>
+                <a href="contact.html" class="btn btn-light pulse-animation">Contactar Ahora</a>
+            </div>
         </div>
     </section>
 
@@ -232,6 +237,7 @@
                         <li><a href="about.html">Sobre Nosotros</a></li>
                         <li><a href="services.html">Nuestros Servicios</a></li>
                         <li><a href="programas.html">Nuestros Programas</a></li>
+                        <li><a href="consulta-examenes.html">Consulta de Examenes</a></li>
                         <li><a href="sedes.html">Nuestras Sedes</a></li>
                         <li><a href="documents.html">Documentos</a></li>
                         <li><a href="contact.html">Contacto</a></li>
@@ -247,22 +253,26 @@
                 <div class="footer-section">
                     <h3>Síguenos</h3>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=61558642860971&locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/Ipsconexionsalud" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61558642860971&locale=es_LA" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/Ipsconexionsalud" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                         <div style="position: relative;">
-                      <a href="javascript:void(0)" onclick="toggleSedeSelector()" title="Contactar por WhatsApp">
-                        <i class="fa-brands fa-whatsapp"> </i>
-                      </a>
-                      <select
-                        id="sedeSelector"
-                        onchange="redirigirWhatsApp()"
-                        style="position: absolute; top: 45px; left: 0; display: none; font-size: 0.9em; min-width: 160px; z-index: 100;">
-                        <option value="" disabled selected>Selecciona sede</option>
-                        <option value="22">Sede 22 - B24X</option>
-                        <option value="34">Sede 34 - OPTOMERIA</option>
-                        <option value="35">Sede 35 - ARTRITIS</option>
-                      </select>
-                    </div>
+                            <a href="javascript:void(0)" onclick="toggleSedeSelector()" title="Contactar por WhatsApp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <select
+                                id="sedeSelector"
+                                onchange="redirigirWhatsApp()"
+                                style="position: absolute; top: 45px; left: 0; display: none; font-size: 0.9em; min-width: 160px; z-index: 100;">
+                                <option value="" disabled selected>Selecciona sede</option>
+                                <option value="22">Sede 22 - B24X</option>
+                                <option value="34">Sede 34 - OPTOMERIA</option>
+                                <option value="35">Sede 35 - ARTRITIS</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>

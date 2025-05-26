@@ -209,18 +209,27 @@
                       <i class="fab fa-instagram"></i>
                     </a>
                      <div style="position: relative;">
-                      <a href="javascript:void(0)" onclick="toggleSedeSelector()" title="Contactar por WhatsApp">
+                      <a href="javascript:void(0)" onclick="toggleWhatsAppPopup()" title="Contactar por WhatsApp">
                         <i class="fa-brands fa-whatsapp"> </i>
                       </a>
-                      <select
-                        id="sedeSelector"
-                        onchange="redirigirWhatsApp()"
-                        style="position: absolute; top: 45px; left: 0; display: none; font-size: 0.9em; min-width: 160px; z-index: 100;">
-                        <option value="" disabled selected>Selecciona sede</option>
-                        <option value="22">Sede 22 - B24X</option>
-                        <option value="34">Sede 34 - OPTOMERIA</option>
-                        <option value="35">Sede 35 - ARTRITIS</option>
-                      </select>
+                      <!-- Popup de WhatsApp -->
+                      <div id="whatsapp-popup" style="display: none; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); background: white; border: 1px solid #ddd; border-radius: 10px; padding: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000; min-width: 250px;">
+                          <h4 style="margin: 0 0 10px 0; color: var(--primary-color); font-size: 14px;">Contactar por WhatsApp:</h4>
+                          <div style="display: flex; flex-direction: column; gap: 8px;">
+                              <a href="https://wa.me/573218080610?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20la%20Sede%2022%20-%20Crónicos" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Sede 22 - Crónicos</a>
+                              <a href="https://wa.me/573161194930?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20la%20Sede%2034%20-%20Optometría" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Sede 34 - Optometría</a>
+                              <a href="https://wa.me/573008742340?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20Home%20Care" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Sede 34 - Home Care</a>
+                              <a href="https://wa.me/573016012706?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20Cuidados%20Paliativos" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Sede 34 - Paliativos</a>
+                              <a href="https://wa.me/573207914983?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20la%20Sede%2035%20-%20Artritis" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Sede 35 - Artritis</a>
+                              <a href="https://wa.me/573011992823?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20Nefro%20Protección%20en%20Popayán" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Popayán - Nefro Protección</a>
+                              <a href="https://wa.me/573011992524?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20Artritis%20en%20Popayán" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Popayán - Artritis</a>
+                              <a href="https://wa.me/573011992766?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20EPOC%20en%20Popayán" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Popayán - EPOC</a>
+                              <a href="https://wa.me/573137045139?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20Optometría%20en%20Popayán" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Popayán - Optometría</a>
+                              <a href="https://wa.me/573242025796?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20Alto%20Costo%20en%20Popayán" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Popayán - Alto Costo</a>
+                              <a href="https://wa.me/573202774824?text=Hola,%20me%20interesa%20información%20sobre%20los%20servicios%20de%20Home%20Care%20en%20Mocoa" target="_blank" style="padding: 8px; background: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 12px; text-align: center;">Mocoa - Home Care</a>
+                          </div>
+                          <button onclick="toggleWhatsAppPopup()" style="margin-top: 10px; padding: 5px 10px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; width: 100%; font-size: 12px;">Cerrar</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -232,5 +241,25 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function toggleWhatsAppPopup() {
+            const popup = document.getElementById('whatsapp-popup');
+            if (popup.style.display === 'none' || popup.style.display === '') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        }
+
+        // Cerrar popup al hacer clic fuera de él
+        document.addEventListener('click', function(event) {
+            const popup = document.getElementById('whatsapp-popup');
+            const whatsappIcon = event.target.closest('[onclick="toggleWhatsAppPopup()"]');
+            
+            if (!whatsappIcon && popup.style.display === 'block') {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

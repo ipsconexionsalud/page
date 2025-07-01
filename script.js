@@ -4,6 +4,12 @@ const slides = document.querySelectorAll(".carousel-item")
 const indicators = document.querySelectorAll(".indicator")
 const totalSlides = slides.length
 
+// News carousel functionality
+let currentNewsSlide = 0
+const newsSlides = document.querySelectorAll(".news-carousel-item")
+const newsIndicators = document.querySelectorAll(".news-indicator")
+const totalNewsSlides = newsSlides.length
+
 // Initialize the carousel
 function initCarousel() {
   if (slides.length > 0) {
@@ -12,6 +18,17 @@ function initCarousel() {
     setInterval(() => {
       moveCarousel(1)
     }, 8000)
+  }
+}
+
+// Initialize the news carousel
+function initNewsCarousel() {
+  if (newsSlides.length > 0) {
+    showNewsSlide(0)
+    // Auto slide every 6 seconds
+    setInterval(() => {
+      moveNewsCarousel(1)
+    }, 10000)
   }
 }
 
@@ -34,16 +51,47 @@ function showSlide(n) {
   }
 }
 
+// Show a specific news slide
+function showNewsSlide(n) {
+  // Hide all news slides
+  newsSlides.forEach((slide) => {
+    slide.classList.remove("active")
+  })
+
+  // Remove active class from all news indicators
+  newsIndicators.forEach((indicator) => {
+    indicator.classList.remove("active")
+  })
+
+  // Show the current news slide and activate its indicator
+  newsSlides[n].classList.add("active")
+  if (newsIndicators[n]) {
+    newsIndicators[n].classList.add("active")
+  }
+}
+
 // Move the carousel by a certain number of slides
 function moveCarousel(direction) {
   currentSlide = (currentSlide + direction + totalSlides) % totalSlides
   showSlide(currentSlide)
 }
 
+// Move the news carousel by a certain number of slides
+function moveNewsCarousel(direction) {
+  currentNewsSlide = (currentNewsSlide + direction + totalNewsSlides) % totalNewsSlides
+  showNewsSlide(currentNewsSlide)
+}
+
 // Set the carousel to a specific slide (for indicators)
 function setCarousel(n) {
   currentSlide = n
   showSlide(currentSlide)
+}
+
+// Set the news carousel to a specific slide (for indicators)
+function setNewsCarousel(n) {
+  currentNewsSlide = n
+  showNewsSlide(currentNewsSlide)
 }
 
 // Program Modal functionality
@@ -78,6 +126,9 @@ window.onclick = (event) => {
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize carousel if it exists on the page
   initCarousel()
+
+  // Initialize news carousel if it exists on the page
+  initNewsCarousel()
 
   // Set up accordion functionality
   const accordionHeaders = document.querySelectorAll(".accordion-header")

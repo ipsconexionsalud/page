@@ -2969,6 +2969,7 @@ footer {
     font-size: 1.8rem;
   }
 
+}
   /* ===== ESTILOS PARA NOTICIAS.HTML - GALERÍA SIMPLE ===== */
 
 /* News Gallery Section */
@@ -3239,6 +3240,4 @@ footer {
   .news-content h3 {
     font-size: 1.2rem;
   }
-}
-
 }

@@ -71,7 +71,7 @@
                         </div>
                         <h3>Campaña de Vacunación Exitosa</h3>
                         <p>Nuestra fundación completó con éxito la campaña de vacunación comunitaria, beneficiando a más de 500 familias en la región de Pasto. Esta iniciativa forma parte de nuestro compromiso con la salud preventiva.</p>
-                        <a href="#" class="btn-read-more">
+                        <a href="#" class="btn-read-more" onclick="openNewsModal('modal-noticia-1')">
                             Leer más <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -91,7 +91,7 @@
                         </div>
                         <h3>Adquisición de Nuevo Equipo Médico</h3>
                         <p>Incorporamos tecnología de última generación para mejorar nuestros servicios de diagnóstico y tratamiento especializado. Este equipamiento nos permite ofrecer atención de mayor calidad.</p>
-                        <a href="#" class="btn-read-more">
+                        <a href="#" class="btn-read-more" onclick="openNewsModal('modal-noticia-2')">
                             Leer más <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -111,7 +111,7 @@
                         </div>
                         <h3>Jornada de Salud Gratuita</h3>
                         <p>Realizamos una jornada de consultas médicas gratuitas en comunidades rurales, atendiendo a más de 200 pacientes. Continuamos llevando salud a quienes más lo necesitan.</p>
-                        <a href="#" class="btn-read-more">
+                        <a href="#" class="btn-read-more" onclick="openNewsModal('modal-noticia-3')">
                             Leer más <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -131,7 +131,7 @@
                         </div>
                         <h3>Capacitación en Cuidados Paliativos</h3>
                         <p>Nuestro equipo médico participó en un seminario internacional sobre cuidados paliativos y manejo del dolor, fortaleciendo nuestras competencias en esta área especializada.</p>
-                        <a href="#" class="btn-read-more">
+                        <a href="#" class="btn-read-more" onclick="openNewsModal('modal-noticia-4')">
                             Leer más <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -140,52 +140,136 @@
         </div>
     </section>
 
-    <section class="news-highlights">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="animate__animated animate__fadeIn">Destacados del Mes</h2>
-                <div class="underline"></div>
+    <!-- Modales para noticias -->
+    <div id="modal-noticia-1" class="news-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeNewsModal('modal-noticia-1')">&times;</span>
+            <div class="modal-header">
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Campaña de vacunación">
+                <div class="modal-header-content">
+                    <div class="modal-category">Salud Comunitaria</div>
+                    <h2>Campaña de Vacunación Exitosa</h2>
+                    <div class="modal-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        15 de Diciembre, 2023
+                    </div>
+                </div>
             </div>
-            <div class="news-grid">
-                <div class="news-card animate__animated animate__fadeInUp">
-                    <div class="news-card-image">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Atención especializada">
-                        <div class="news-card-category">Servicios</div>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-date">20 de Noviembre, 2023</div>
-                        <h3>Ampliación de Servicios de Home Care</h3>
-                        <p>Expandimos nuestro programa de atención domiciliaria para llegar a más familias que necesitan cuidados especializados en casa.</p>
-                        <a href="#" class="btn-link">Leer más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="news-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
-                    <div class="news-card-image">
-                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reconocimiento">
-                        <div class="news-card-category">Reconocimientos</div>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-date">15 de Noviembre, 2023</div>
-                        <h3>Reconocimiento por Labor Social</h3>
-                        <p>La Alcaldía de Pasto reconoció nuestra labor en el mejoramiento de la calidad de vida de las comunidades vulnerables.</p>
-                        <a href="#" class="btn-link">Leer más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="news-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
-                    <div class="news-card-image">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Programa educativo">
-                        <div class="news-card-category">Educación</div>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-date">10 de Noviembre, 2023</div>
-                        <h3>Programa de Educación en Salud</h3>
-                        <p>Lanzamos un nuevo programa educativo para promover hábitos saludables en escuelas y colegios de la región.</p>
-                        <a href="#" class="btn-link">Leer más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+            <div class="modal-body">
+                <p>Nuestra fundación completó con éxito la campaña de vacunación comunitaria, beneficiando a más de 500 familias en la región de Pasto. Esta iniciativa forma parte de nuestro compromiso con la salud preventiva y el bienestar de la comunidad.</p>
+                
+                <h3>Detalles de la Campaña</h3>
+                <ul>
+                    <li><strong>Familias beneficiadas:</strong> Más de 500 familias</li>
+                    <li><strong>Ubicación:</strong> Región de Pasto, Nariño</li>
+                    <li><strong>Tipo de vacunas:</strong> Esquema completo de inmunización</li>
+                    <li><strong>Personal involucrado:</strong> 15 profesionales de la salud</li>
+                </ul>
+                
+                <p>La campaña se desarrolló durante tres semanas consecutivas, visitando diferentes barrios y veredas de la ciudad. Nuestro equipo médico trabajó incansablemente para garantizar que todas las familias tuvieran acceso a las vacunas necesarias.</p>
+                
+                <p>Este logro representa un paso importante en nuestros esfuerzos por promover la salud preventiva y reducir la incidencia de enfermedades prevenibles en nuestra comunidad.</p>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div id="modal-noticia-2" class="news-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeNewsModal('modal-noticia-2')">&times;</span>
+            <div class="modal-header">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Nuevo equipo médico">
+                <div class="modal-header-content">
+                    <div class="modal-category">Tecnología</div>
+                    <h2>Adquisición de Nuevo Equipo Médico</h2>
+                    <div class="modal-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        10 de Diciembre, 2023
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Incorporamos tecnología de última generación para mejorar nuestros servicios de diagnóstico y tratamiento especializado. Este equipamiento nos permite ofrecer atención de mayor calidad a nuestros pacientes.</p>
+                
+                <h3>Nuevo Equipamiento</h3>
+                <ul>
+                    <li><strong>Ecógrafo de alta resolución:</strong> Para diagnósticos más precisos</li>
+                    <li><strong>Monitor de signos vitales:</strong> Monitoreo continuo de pacientes</li>
+                    <li><strong>Equipo de rayos X digital:</strong> Imágenes de alta calidad</li>
+                    <li><strong>Desfibrilador automático:</strong> Para emergencias cardíacas</li>
+                </ul>
+                
+                <p>La inversión en tecnología médica es fundamental para mantener nuestros estándares de calidad y ofrecer servicios competitivos. Este nuevo equipamiento beneficiará directamente a todos nuestros pacientes.</p>
+                
+                <p>Nuestro personal médico ha recibido capacitación especializada para el manejo de estos equipos, garantizando su uso óptimo y seguro.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-noticia-3" class="news-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeNewsModal('modal-noticia-3')">&times;</span>
+            <div class="modal-header">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Jornada de salud">
+                <div class="modal-header-content">
+                    <div class="modal-category">Atención Social</div>
+                    <h2>Jornada de Salud Gratuita</h2>
+                    <div class="modal-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        5 de Diciembre, 2023
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Realizamos una jornada de consultas médicas gratuitas en comunidades rurales, atendiendo a más de 200 pacientes. Continuamos llevando salud a quienes más lo necesitan.</p>
+                
+                <h3>Servicios Ofrecidos</h3>
+                <ul>
+                    <li><strong>Consulta médica general:</strong> Evaluación integral de salud</li>
+                    <li><strong>Control de presión arterial:</strong> Detección de hipertensión</li>
+                    <li><strong>Exámenes de glucosa:</strong> Prevención de diabetes</li>
+                    <li><strong>Consulta odontológica:</strong> Salud oral preventiva</li>
+                    <li><strong>Entrega de medicamentos:</strong> Tratamientos básicos gratuitos</li>
+                </ul>
+                
+                <p>Esta jornada se realizó en tres veredas del municipio, llevando atención médica de calidad a comunidades que tienen dificultades de acceso a servicios de salud.</p>
+                
+                <p>El impacto de estas jornadas va más allá de la atención inmediata, ya que también incluye educación en salud y promoción de hábitos saludables.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-noticia-4" class="news-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeNewsModal('modal-noticia-4')">&times;</span>
+            <div class="modal-header">
+                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Capacitación médica">
+                <div class="modal-header-content">
+                    <div class="modal-category">Capacitación</div>
+                    <h2>Capacitación en Cuidados Paliativos</h2>
+                    <div class="modal-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        1 de Diciembre, 2023
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Nuestro equipo médico participó en un seminario internacional sobre cuidados paliativos y manejo del dolor, fortaleciendo nuestras competencias en esta área especializada.</p>
+                
+                <h3>Temas del Seminario</h3>
+                <ul>
+                    <li><strong>Manejo integral del dolor:</strong> Técnicas avanzadas de control</li>
+                    <li><strong>Cuidados paliativos pediátricos:</strong> Atención especializada para niños</li>
+                    <li><strong>Apoyo psicológico:</strong> Acompañamiento emocional</li>
+                    <li><strong>Cuidados en el hogar:</strong> Atención domiciliaria especializada</li>
+                    <li><strong>Trabajo en equipo:</strong> Coordinación multidisciplinaria</li>
+                </ul>
+                
+                <p>La capacitación fue impartida por expertos internacionales en cuidados paliativos, proporcionando a nuestro equipo las herramientas más actualizadas para brindar atención de calidad.</p>
+                
+                <p>Este conocimiento se traduce directamente en una mejor atención para nuestros pacientes que requieren cuidados paliativos, mejorando su calidad de vida y la de sus familias.</p>
+            </div>
+        </div>
+    </div>
 
     <section class="cta">
         <div class="cta-overlay"></div>

@@ -28,7 +28,7 @@ function initNewsCarousel() {
     // Auto slide every 6 seconds
     setInterval(() => {
       moveNewsCarousel(1)
-    }, 10000)
+    }, 6000)
   }
 }
 
@@ -403,3 +403,45 @@ style.textContent = `
   }
 `
 document.head.appendChild(style)
+
+// News Modal functionality
+function openNewsModal(modalId) {
+  const modal = document.getElementById(modalId)
+  if (modal) {
+    modal.style.display = "block"
+    document.body.style.overflow = "hidden" // Prevent scrolling when modal is open
+  }
+}
+
+function closeNewsModal(modalId) {
+  const modal = document.getElementById(modalId)
+  if (modal) {
+    modal.style.display = "none"
+    document.body.style.overflow = "" // Restore scrolling
+  }
+}
+
+// Close modal when clicking outside of it
+window.addEventListener("click", (event) => {
+  const modals = document.querySelectorAll(".news-modal")
+  modals.forEach((modal) => {
+    if (event.target === modal) {
+      modal.style.display = "none"
+      document.body.style.overflow = ""
+    }
+  })
+})
+
+// Close modal with Escape key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const modals = document.querySelectorAll(".news-modal")
+    modals.forEach((modal) => {
+      if (modal.style.display === "block") {
+        modal.style.display = "none"
+        document.body.style.overflow = ""
+      }
+    })
+  }
+})
+
